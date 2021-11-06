@@ -15,6 +15,7 @@ void init()
     gluOrtho2D(0.0, 800, 0.0, 600);
 }
 
+
 void home()
 {   
 
@@ -35,7 +36,7 @@ void home()
 
         //Draw 2nd Circle for the moon
         //Color it white
-        glColor3f(1, 1, 1); 
+        glColor3f(1, 1, 1);
         glBegin(GL_POLYGON);
             
                 for (int i = 0; i < 360; i++) {
@@ -44,6 +45,18 @@ void home()
                     glVertex2f(620 + 50 * cos(angle_theta),
                             550 + 50 * sin(angle_theta));
                 }       
+        glEnd();
+
+        //Draw the dome
+       
+        glColor3f(0.1, 0.7, 0.5);
+        glBegin(GL_LINE_STRIP);
+        for (int i = 0; i < 190; i++) 
+        {
+            // Find the angle
+            float angle_theta = i * 3.142 / 180;
+            glVertex2f(350 + 200 * cos(angle_theta), 400 + 200  * sin(angle_theta));
+        }
         glEnd();
 
     // square bottom
@@ -67,6 +80,8 @@ void home()
     glVertex2i(150, 0);
     glEnd();
 
+
+
     // Set line segment color as glColor3f(R,G,B)
     glColor3f(0.807, 0.576, 0.847);
     glBegin(GL_POLYGON);
@@ -80,11 +95,12 @@ void home()
     glColor3f(0.1, 0.7, 0.5);
     glLineWidth(1);
     glBegin(GL_LINES);
-    glVertex2i(100, 300);
-    glVertex2i(100, 400);
+    glVertex2i(100, 300); // bottom left
+    glVertex2i(100, 400); //top left
     glVertex2i(100, 400);
     glVertex2i(600, 400);
     glVertex2i(600, 400);
+                                                           
     glVertex2i(600, 300);
     glVertex2i(100, 300); 
     glVertex2i(600, 300);
