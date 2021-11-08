@@ -30,7 +30,7 @@ void home()
                     // Find the angle
                     float angle_theta = i * 3.142 / 180;
                     glVertex2f(600 + 50 * cos(angle_theta),
-                            530 + 50 * sin(angle_theta));
+                            550 + 50 * sin(angle_theta));
                 }       
         glEnd();
 
@@ -43,7 +43,7 @@ void home()
                     // Find the angle
                     float angle_theta = i * 3.142 / 180;
                     glVertex2f(620 + 50 * cos(angle_theta),
-                            550 + 50 * sin(angle_theta));
+                            570 + 50 * sin(angle_theta));
                 }       
         glEnd();
 
@@ -55,7 +55,7 @@ void home()
         {
             // Find the angle
             float angle_theta = i * 3.142 / 180;
-            glVertex2f(350 + 200 * cos(angle_theta), 400 + 200  * sin(angle_theta));
+            glVertex2f(350 + 200 * cos(angle_theta), 380 + 200  * sin(angle_theta));
         }
         glEnd();
 
@@ -68,16 +68,16 @@ void home()
     glVertex2i(550,0);
     glEnd();
 
-    //lines of square bottom
+    //lines of square bottom - pushed up
     glColor3f(0.1, 0.7, 0.5);
     glLineWidth(2);
     glBegin(GL_LINES);
-    glVertex2i(150, 0);
-    glVertex2i(150, 400);
-    glVertex2i(550,400);
-    glVertex2i(550,0);
-    glVertex2i(550,0);
-    glVertex2i(150, 0);
+    glVertex2i(150, 20);
+    glVertex2i(150, 420);
+    glVertex2i(550,420);
+    glVertex2i(550,20);
+    glVertex2i(550,20);
+    glVertex2i(150, 20);
     glEnd();
 
 
@@ -85,66 +85,66 @@ void home()
     // Set line segment color as glColor3f(R,G,B)
     glColor3f(0.807, 0.576, 0.847);
     glBegin(GL_POLYGON);
-    glVertex2i(100, 300);
-    glVertex2i(100, 400);
-    glVertex2i(600, 400);
-    glVertex2i(600, 300);
+    glVertex2i(100, 320);
+    glVertex2i(100, 420);
+    glVertex2i(600, 420);
+    glVertex2i(600, 320);
     glEnd();
 
     //lines of rectangle top
     glColor3f(0.1, 0.7, 0.5);
     glLineWidth(1);
     glBegin(GL_LINES);
-    glVertex2i(100, 300); // bottom left
-    glVertex2i(100, 400); //top left
-    glVertex2i(100, 400);
-    glVertex2i(600, 400);
-    glVertex2i(600, 400);
+    glVertex2i(100, 320); // bottom left
+    glVertex2i(100, 420); //top left
+    glVertex2i(100, 420);
+    glVertex2i(600, 420);
+    glVertex2i(600, 420);
                                                            
-    glVertex2i(600, 300);
-    glVertex2i(100, 300); 
-    glVertex2i(600, 300);
+    glVertex2i(600, 320);
+    glVertex2i(100, 320); 
+    glVertex2i(600, 320);
     glEnd();
 
     
     // window one
     glColor3f(1, 0.768, 1);
     glBegin(GL_POLYGON);
-    glVertex2i(200, 185);
-    glVertex2i(200, 100);
-    glVertex2i(270, 100);
-    glVertex2i(270, 185);
+    glVertex2i(200, 205);
+    glVertex2i(200, 120);
+    glVertex2i(270, 120);
+    glVertex2i(270, 205);
     glEnd();
     // line of window one
     glColor3f(0.1, 0.7, 0.5);
     glLineWidth(2);
     glBegin(GL_LINES);
-    glVertex2i(200,100);
-    glVertex2i(200,185);
-    glVertex2i(200,185);
-    glVertex2i(235,185);
-    glVertex2i(235,185);
-    glVertex2i(235,100);
-    glVertex2i(235,100);
-    glVertex2i(200,100);
-    glVertex2i(235,100);
-    glVertex2i(270,100);
-    glVertex2i(270,100);
-    glVertex2i(270,185);
-    glVertex2i(270,185);
-    glVertex2i(235,185);
-    glVertex2i(200,143);
-    glVertex2i(270,143);
+    glVertex2i(200,120);
+    glVertex2i(200,205);
+    glVertex2i(200,205);
+    glVertex2i(235,205);
+    glVertex2i(235,205);
+    glVertex2i(235,120);
+    glVertex2i(235,120);
+    glVertex2i(200,120);
+    glVertex2i(235,120);
+    glVertex2i(270,120);
+    glVertex2i(270,120);
+    glVertex2i(270,205);
+    glVertex2i(270,205);
+    glVertex2i(235,205);
+    glVertex2i(200,163);
+    glVertex2i(270,163);
    
     glEnd();
 
     // Front Door
     glColor3f(0.1, 0.7, 0.5);
     glBegin(GL_POLYGON);
-    glVertex2i(320, 0);
-    glVertex2i(320, 150);
-    glVertex2i(400, 150);
-    glVertex2i(400, 0);
+    glVertex2i(320, 20);
+    glVertex2i(320, 170);
+    glVertex2i(400, 170);
+    glVertex2i(400, 20);
     glEnd();
 
      //Front Door Lock
@@ -155,35 +155,35 @@ void home()
                 // Find the angle
                 float angle_theta = i * 3.142 / 180;
                 glVertex2f(390 + 8 * cos(angle_theta),
-                        75 + 8 * sin(angle_theta));
+                        95 + 8 * sin(angle_theta));
             }       
     glEnd();
 
     // window two
      glColor3f(1, 0.768, 1);
     glBegin(GL_POLYGON);
-    glVertex2i(430, 185);
-    glVertex2i(430, 100);
-    glVertex2i(500, 100);
-    glVertex2i(500, 185);
+    glVertex2i(430, 205);
+    glVertex2i(430, 120);
+    glVertex2i(500, 120);
+    glVertex2i(500, 205);
     glEnd();
 
     // lines of window two
     glColor3f(0.1, 0.7, 0.5);
     glLineWidth(2);
     glBegin(GL_LINES);
-    glVertex2i(430, 100);
-    glVertex2i(430, 185);
-    glVertex2i(430, 185);
-    glVertex2i(500, 185);
-    glVertex2i(500, 185);
-    glVertex2i(500, 100);
-    glVertex2i(500, 100);
-    glVertex2i(430, 100);
-    glVertex2i(430, 143);
-    glVertex2i(500, 143);
-    glVertex2i(465, 185);
-    glVertex2i(465, 100);    
+    glVertex2i(430, 120);
+    glVertex2i(430, 205);
+    glVertex2i(430, 205);
+    glVertex2i(500, 205);
+    glVertex2i(500, 205);
+    glVertex2i(500, 120);
+    glVertex2i(500, 120);
+    glVertex2i(430, 120);
+    glVertex2i(430, 163);
+    glVertex2i(500, 163);
+    glVertex2i(465, 205);
+    glVertex2i(465, 120);    
     glEnd();
 
     // Process all OpenGL routine s as quickly as possible
@@ -198,7 +198,7 @@ int main(int argc, char** argv)
     // Set top - left display window position.
     glutInitWindowPosition(100, 100);
     // Set display window width and height
-    glutInitWindowSize(800, 600);
+    glutInitWindowSize(900, 650);
     // Create display window with the given title
     glutCreateWindow("2D House");
     // Execute initialization procedure
