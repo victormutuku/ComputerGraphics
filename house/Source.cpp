@@ -4,7 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-//Note: GLglut.h path depending on the system in use
+#include <iostream>
+using namespace std;
+//Note: GLglut.h path depending on the system in use    
 void init()
 {
     // Set display window color to as glClearColor(R,G,B,Alpha)
@@ -33,6 +35,24 @@ void home()
                             550 + 50 * sin(angle_theta));
                 }       
         glEnd();
+
+        //Draw first star
+        //Draw first triangle
+        glBegin(GL_POLYGON);
+            glColor3f(0.992, 0.909, 0.325); 
+            glVertex2f(500, 570);
+            glVertex2f(520, 556);
+            glVertex2f(480, 556);
+        glEnd();
+                //Draw second triangle
+        glBegin(GL_POLYGON);
+            glColor3f(0.992, 0.909, 0.325); 
+            glVertex2f(480, 564);
+            glVertex2f(520, 564);
+            glVertex2f(500, 550);
+        glEnd();
+
+
 
         //Draw 2nd Circle for the moon
         //Color it white
@@ -80,8 +100,39 @@ void home()
     glVertex2i(150, 20);
     glEnd();
 
-
-
+        //Draw the first level of grass
+        int a = 100;
+        int b = 110;
+        int c = 105;
+        for (int i = 0; i < 50; i++) 
+        {
+            glBegin(GL_POLYGON);
+            glColor3f(0.1, 0.7, 0.5);
+            glVertex2f(a, 5);
+            glVertex2f(b, 5);
+            glVertex2f(c, 10);
+            glEnd();
+            a = a+10;
+            b = b+10;
+            c = c+10;
+        }  
+        //Draw the second level of grass
+        int d = 100;
+        int e = 110;
+        int f = 105;
+        for (int i = 0; i < 50; i++) 
+        {
+            glBegin(GL_POLYGON);
+            glColor3f(0.1, 0.7, 0.5);
+            glVertex2f(d, 10);
+            glVertex2f(e, 10);
+            glVertex2f(f, 15);
+            glEnd();
+            d = d+10;
+            e = e+10;
+            f = f+10;
+        }  
+     
     // Set line segment color as glColor3f(R,G,B)
     glColor3f(0.807, 0.576, 0.847);
     glBegin(GL_POLYGON);
@@ -198,7 +249,7 @@ int main(int argc, char** argv)
     // Set top - left display window position.
     glutInitWindowPosition(100, 100);
     // Set display window width and height
-    glutInitWindowSize(900, 650);
+    glutInitWindowSize(900, 800);
     // Create display window with the given title
     glutCreateWindow("2D House");
     // Execute initialization procedure
