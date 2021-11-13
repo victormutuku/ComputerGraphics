@@ -34,6 +34,24 @@ void home()
                 }       
         glEnd();
 
+        //Draw first star
+        //Draw first triangle
+        glBegin(GL_POLYGON);
+            glColor3f(0.992, 0.909, 0.325); 
+            glVertex2f(500, 570);
+            glVertex2f(520, 556);
+            glVertex2f(480, 556);
+        glEnd();
+                //Draw second triangle
+        glBegin(GL_POLYGON);
+            glColor3f(0.992, 0.909, 0.325); 
+            glVertex2f(480, 564);
+            glVertex2f(520, 564);
+            glVertex2f(500, 550);
+        glEnd();
+
+
+
         //Draw 2nd Circle for the moon
         //Color it white
         glColor3f(1, 1, 1);
@@ -198,7 +216,7 @@ int main(int argc, char** argv)
     // Set top - left display window position.
     glutInitWindowPosition(100, 100);
     // Set display window width and height
-    glutInitWindowSize(900, 650);
+    glutInitWindowSize(900, 800);
     // Create display window with the given title
     glutCreateWindow("2D House");
     // Execute initialization procedure
