@@ -40,16 +40,16 @@ void home()
         //Draw first triangle
         glBegin(GL_POLYGON);
             glColor3f(0.992, 0.909, 0.325); 
-            glVertex2f(500, 570);
-            glVertex2f(520, 556);
-            glVertex2f(480, 556);
+            glVertex2f(500, 580);
+            glVertex2f(520, 551);
+            glVertex2f(480, 551);
         glEnd();
                 //Draw second triangle
         glBegin(GL_POLYGON);
             glColor3f(0.992, 0.909, 0.325); 
-            glVertex2f(480, 564);
-            glVertex2f(520, 564);
-            glVertex2f(500, 550);
+            glVertex2f(480, 569);
+            glVertex2f(520, 569);
+            glVertex2f(500, 540);
         glEnd();
 
 
@@ -247,9 +247,9 @@ int main(int argc, char** argv)
     // Set display mode
     glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
     // Set top - left display window position.
-    glutInitWindowPosition(100, 100);
+    glutInitWindowPosition(50, 10);
     // Set display window width and height
-    glutInitWindowSize(900, 800);
+    glutInitWindowSize(900, 650);
     // Create display window with the given title
     glutCreateWindow("2D House");
     // Execute initialization procedure
